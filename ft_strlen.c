@@ -6,7 +6,7 @@
 /*   By: eldiaz-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 20:14:36 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/09/16 20:41:16 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/09/17 18:49:21 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	len;
+	unsigned int	len;
 
 	len = 0;
 	while (s[len] != '\0')

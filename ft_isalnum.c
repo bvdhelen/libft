@@ -6,7 +6,7 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 18:52:30 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/09/16 19:14:28 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/09/17 18:25:47 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_isalnum(int c)
 /*
 int	main(void)
 {
-	printf("%d", ft_isalnum('.'));
+	printf("%d", ft_isalnum('3'));
 	return (0);
 }
 */
