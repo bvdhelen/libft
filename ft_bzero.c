@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eldiaz-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 18:53:06 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/09/17 19:00:25 by eldiaz-c         ###   ########.fr       */
+/*   Created: 2024/09/20 20:17:14 by eldiaz-c          #+#    #+#             */
+/*   Updated: 2024/09/20 21:07:20 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,29 @@
 
 void	ft_bzero(void *s, size_t n)
 {
+	unsigned char	*ptr;
 
+	ptr = (unsigned char *) s;
+	while (n > 0)
+	{
+		*ptr = '\0';
+		ptr++;
+		n--;
+	}
 }
+/*
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, '\0', n);
+}
+
+int	main(void)
+{
+	char	buffer[30] = "Hello @bvdhelen";
+
+	ft_bzero (buffer, 6);
+	//printf("%s", buffer); NO SE USA PRINTF PORQUE SOLO LEE HASTA EL PRIMER '\0'
+	write(1, &buffer, 15);
+	return (0);
+}
+*/
