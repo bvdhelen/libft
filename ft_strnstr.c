@@ -6,12 +6,10 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 17:31:19 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/02 18:23:08 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/03 18:50:22 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)

@@ -6,12 +6,10 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:07:01 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/01 17:14:54 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/03 18:50:04 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stddef.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)

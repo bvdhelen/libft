@@ -6,12 +6,10 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 19:26:52 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/02 19:41:35 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/03 18:49:04 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stddef.h>
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

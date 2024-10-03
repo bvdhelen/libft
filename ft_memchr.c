@@ -6,12 +6,10 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 19:14:35 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/02 19:31:04 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/03 18:48:56 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stddef.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)

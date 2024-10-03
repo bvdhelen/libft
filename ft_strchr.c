@@ -6,11 +6,10 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:19:12 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/01 17:30:20 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/03 18:49:34 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)

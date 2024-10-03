@@ -6,11 +6,10 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:24:59 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/01 18:26:28 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/03 18:50:41 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_toupper(int c)

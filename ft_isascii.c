@@ -6,11 +6,10 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 19:50:32 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/01 18:27:42 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/03 18:48:36 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_isascii(int c)

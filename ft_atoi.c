@@ -6,11 +6,10 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 18:14:55 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/02 18:43:19 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/03 18:28:03 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_atoi(const char *nptr)

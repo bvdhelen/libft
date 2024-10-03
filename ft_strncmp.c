@@ -6,12 +6,10 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 18:38:21 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/01 19:04:18 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/03 18:50:15 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stddef.h>
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
