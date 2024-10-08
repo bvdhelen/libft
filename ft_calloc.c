@@ -6,7 +6,7 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 19:46:33 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/03 18:29:31 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/08 16:44:20 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t			total_size;
 	unsigned char	*allocated_mem;
 
-	if (nmemb == 0 || size == 0)
-		return (NULL);
 	total_size = nmemb * size;
 	allocated_mem = malloc(total_size);
 	if (allocated_mem == NULL)

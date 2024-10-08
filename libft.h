@@ -6,15 +6,15 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 19:01:34 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/03 21:09:34 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/08 17:00:32 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h> //libreria que define size_t
-# include <stdlib.h> //libreria que define malloc()
+// # include <stddef.h> libreria que define size_t
+# include <stdlib.h> //libreria que define malloc(), size_t
 # include <stdio.h> //libreria que define printf, perror, fopen, fclose
 # include <unistd.h> //libreria que define write
 
@@ -44,6 +44,13 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 
 //Parte 2
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);

@@ -6,7 +6,7 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 20:17:14 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/03 18:28:11 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/08 01:40:33 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 	ptr = (unsigned char *) s;
 	while (n > 0)
 	{
-		*ptr = '\0';
+		*ptr = 0;
 		ptr++;
 		n--;
 	}

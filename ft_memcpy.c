@@ -6,7 +6,7 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 21:39:03 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/03 18:49:11 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/08 16:36:46 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	temp_dest = (unsigned char *) dest;
 	temp_src = (unsigned char *) src;
-	if (dest == NULL || src == NULL)
-		return (dest);
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	while (i < n)
 	{
 		temp_dest[i] = temp_src[i];
@@ -34,11 +34,11 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 /*
 int	main(void)
 {
-	char	src[] = "@bvdhelen es mi insta";
+	char	src[] = "";
 	char	dest[25];
 
-	ft_memcpy(dest, src, 9);
-	dest[9] = '\0'; //Asegurarme que dest esté terminado en NULL
+	ft_memcpy(NULL, NULL, 9);
+	dest[9] = '\0';
 	printf("%s", dest);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 16:44:39 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/03 18:49:19 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/08 16:34:12 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	temp_dest = (unsigned char *) dest;
 	temp_src = (unsigned char *) src;
-	if (dest == NULL || src == NULL)
-		return (NULL);
 	if (dest == src)
 		return (dest);
 	if (temp_dest > temp_src)

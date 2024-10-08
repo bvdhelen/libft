@@ -6,7 +6,7 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 17:36:14 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/03 18:49:41 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/08 16:38:57 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,7 @@ char	*ft_strdup(const char *s)
 {
 	char			*dest;
 	size_t			len;
-	unsigned int	i;
 
-	if (s == NULL)
-		return (NULL);
-	i = 0;
 	len = ft_strlen(s);
 	dest = malloc(len + 1);
 	if (dest == NULL)
