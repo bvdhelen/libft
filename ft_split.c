@@ -6,7 +6,7 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 17:18:35 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/09 16:40:39 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/09 19:26:22 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	**ft_split(char const *s, char c)
 
 	word_count = count_words(s, c);
 	result = malloc((word_count + 1) * sizeof(char *));
-	if (result == NULL)
+	if (!result)
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -78,12 +78,39 @@ char	**ft_split(char const *s, char c)
 	result[j] = NULL;
 	return (result);
 }
-/*
-int main(int argc, char *argv[]){
-	
-	if (argc <= 1)
-		return(1);
-	printf("--> %d\n", count_words(argv[1], 'k'));
-	return (0);
+
+void print_split_result(char **result) 
+{
+    if (result == NULL) {
+        printf("NULL\n");
+        return;
+    }
+    for (int i = 0; result[i] != NULL; i++) {
+        printf("Word %d: %s\n", i, result[i]);
+    }
 }
-*/
+
+void free_split(char **result) {
+    if (result != NULL) {
+        for (int i = 0; result[i] != NULL; i++) {
+            free(result[i]);
+        }
+        free(result);
+    }
+}
+
+/* int main() {
+    char *str5 = ""; // Test with an empty string
+    char c = ' '; // Delimitador
+
+    char **result;
+
+    printf("Testing ft_split with various strings:\n");
+
+    result = ft_split(str5, c);
+    printf("\nInput: '%s'\n", str5);
+    print_split_result(result);
+    free_split(result);
+
+    return 0;
+} */
