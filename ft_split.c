@@ -28,17 +28,6 @@ static int	count_words(char const *str, char limit)
 	return (count);
 }
 
-
-
-int main(int argc, char *argv[]){
-	
-	if (argc <= 1)
-		return(1);
-
-	printf("--> %d\n", count_words(argv[1], 'k'));
-	return (0);
-}
-/* 
 static void	free_memory(char **result, int count)
 {
 	while (count >= 0)
@@ -49,10 +38,57 @@ static void	free_memory(char **result, int count)
 	free (result);
 }
 
+static int	count_letters(char const *str, char limit)
+{
+	int	len;
+
+	len = 0;
+	while (str[len] != '\0' && str[len] != limit)
+	{
+		len++;
+	}
+	return (len);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
 	int		len_word;
+	int		word_count;
 	int		i;
+	int		j;
 
-} */
+	if (s == NULL)
+		return (NULL);
+	word_count = count_words(s, c);
+	result = malloc((word_count + 1) * sizeof(char *));
+	if (result == NULL)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (j < word_count)
+	{
+		while (s[i] != '\0' && s[i] == c)
+			i++;
+		len_word = count_letters(&s[i], c);
+		result[j] = ft_substr(s, i, len_word);
+		if (result[j] == NULL)
+		{
+			free_memory(result, j - 1);
+			return (NULL);
+		}
+		i = i + len_word; 
+		j++;
+	}
+	result[j] = NULL;
+	return (result);
+}
+
+int main(int argc, char *argv[]){
+	
+	if (argc <= 1)
+		return(1);
+
+	printf("--> %d\n", count_words(argv[1], 'k'));
+	return (0);
+}
