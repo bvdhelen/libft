@@ -6,7 +6,7 @@
 #    By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 00:48:17 by eldiaz-c          #+#    #+#              #
-#    Updated: 2024/10/08 17:21:53 by eldiaz-c         ###   ########.fr        #
+#    Updated: 2024/10/09 17:21:05 by eldiaz-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ SOURCES = ft_isalpha.c \
 		ft_substr.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
+		ft_split.c \
 		ft_itoa.c \
 		ft_strmapi.c \
 		ft_striteri.c \
@@ -67,6 +68,10 @@ all: $(NAME)
 # Regla para crear la biblioteca
 $(NAME): $(OBJECTS) $(INCLUDE)
 	@ar rcs $(NAME) $(OBJECTS)
+
+# Regla para crear los archivos .o
+$(OBJECTS):
+	$(CC) -c $(CFLAGS) $(SOURCES)
 
 # Eliminar todos los archivos .o y .a
 clean:

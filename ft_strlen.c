@@ -6,7 +6,7 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 20:14:36 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/03 18:50:10 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/09 16:05:03 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ size_t	ft_strlen(const char *s)
 
 	len = 0;
 	while (s[len] != '\0')
-	{
 		len++;
-	}
 	return (len);
 }
 

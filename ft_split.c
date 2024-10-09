@@ -6,7 +6,7 @@
 /*   By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 17:18:35 by eldiaz-c          #+#    #+#             */
-/*   Updated: 2024/10/08 19:22:01 by eldiaz-c         ###   ########.fr       */
+/*   Updated: 2024/10/09 16:40:39 by eldiaz-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,15 @@ static int	count_words(char const *str, char limit)
 	count = 0;
 	while (str[i] != '\0')
 	{
-		if ((i == 0 && str[i] != limit) || (str[i] != limit && str[i - 1] == limit))
+		if ((i == 0 && str[i] != limit)
+			|| (str[i] != limit && str[i - 1] == limit))
 			count++;
 		i++;
 	}
 	return (count);
 }
 
-static void	free_memory(char **result, int count)
+static char	**free_memory(char **result, int count)
 {
 	while (count >= 0)
 	{
@@ -36,6 +37,7 @@ static void	free_memory(char **result, int count)
 		count--;
 	}
 	free (result);
+	return (NULL);
 }
 
 static int	count_letters(char const *str, char limit)
@@ -44,9 +46,7 @@ static int	count_letters(char const *str, char limit)
 
 	len = 0;
 	while (str[len] != '\0' && str[len] != limit)
-	{
 		len++;
-	}
 	return (len);
 }
 
@@ -58,8 +58,6 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 
-	if (s == NULL)
-		return (NULL);
 	word_count = count_words(s, c);
 	result = malloc((word_count + 1) * sizeof(char *));
 	if (result == NULL)
@@ -73,22 +71,19 @@ char	**ft_split(char const *s, char c)
 		len_word = count_letters(&s[i], c);
 		result[j] = ft_substr(s, i, len_word);
 		if (result[j] == NULL)
-		{
-			free_memory(result, j - 1);
-			return (NULL);
-		}
-		i = i + len_word; 
+			return (free_memory(result, j - 1));
+		i = i + len_word;
 		j++;
 	}
 	result[j] = NULL;
 	return (result);
 }
-
+/*
 int main(int argc, char *argv[]){
 	
 	if (argc <= 1)
 		return(1);
-
 	printf("--> %d\n", count_words(argv[1], 'k'));
 	return (0);
 }
+*/
