@@ -78,39 +78,3 @@ char	**ft_split(char const *s, char c)
 	result[j] = NULL;
 	return (result);
 }
-
-void print_split_result(char **result) 
-{
-    if (result == NULL) {
-        printf("NULL\n");
-        return;
-    }
-    for (int i = 0; result[i] != NULL; i++) {
-        printf("Word %d: %s\n", i, result[i]);
-    }
-}
-
-void free_split(char **result) {
-    if (result != NULL) {
-        for (int i = 0; result[i] != NULL; i++) {
-            free(result[i]);
-        }
-        free(result);
-    }
-}
-
-/* int main() {
-    char *str5 = ""; // Test with an empty string
-    char c = ' '; // Delimitador
-
-    char **result;
-
-    printf("Testing ft_split with various strings:\n");
-
-    result = ft_split(str5, c);
-    printf("\nInput: '%s'\n", str5);
-    print_split_result(result);
-    free_split(result);
-
-    return 0;
-} */
