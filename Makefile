@@ -6,7 +6,7 @@
 #    By: eldiaz-c <eldiaz-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 00:48:17 by eldiaz-c          #+#    #+#              #
-#    Updated: 2024/10/09 17:21:05 by eldiaz-c         ###   ########.fr        #
+#    Updated: 2024/10/22 18:23:37 by eldiaz-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,19 @@ SOURCES = ft_isalpha.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
 
+BONUS_SOURCES = ft_lstnew_bonus.c \
+				ft_lstadd_front_bonus.c \
+				ft_lstsize_bonus.c \
+				ft_lstlast_bonus.c \
+				ft_lstadd_back_bonus.c \
+				ft_lstdelone_bonus.c \
+				ft_lstclear_bonus.c \
+				ft_lstiter_bonus.c \
+				ft_lstmap_bonus.c \
+
 OBJECTS = $(SOURCES:.c=.o)
+
+BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
 
 # Archivo de encabezado
 INCLUDE = libft.h
@@ -73,9 +85,13 @@ $(NAME): $(OBJECTS) $(INCLUDE)
 $(OBJECTS):
 	$(CC) -c $(CFLAGS) $(SOURCES)
 
+# Regla para crear los archivos bonus .o sin hacer relink
+bonus:
+	make SOURCES="$(SOURCES) $(BONUS_SOURCES)"
+
 # Eliminar todos los archivos .o y .a
 clean:
-	@rm -f $(OBJECTS)
+	@rm -f $(OBJECTS) $(BONUS_OBJECTS)
 
 fclean: clean
 	@rm -f $(NAME)
@@ -83,4 +99,4 @@ fclean: clean
 re: fclean $(NAME)
 
 # Indica que las siguientes reglas no son archivos reales
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re
